@@ -1,0 +1,342 @@
+
+
+/* Esta es la guía que siempre uso:https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+p, a{margin:8px;}
+body{
+    background-color: rgb(199, 246, 244);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Paso 1 */
+.container1{ 
+    background-color: red;
+    width: 400px;
+    height: 250px;
+}
+
+/* Paso 2*/
+.container2{ 
+    width: 400px;
+    height: 250px;
+
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+}
+
+/* Paso 3*/
+.container3{ 
+    width: 400px;
+    height: 250px;
+
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+.container3__div1{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(202, 200, 65, 0.335);
+}
+.container3__div2{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(253, 25, 242, 0.363);
+}
+
+
+/* Paso 4*/
+.container4{ 
+    width: 400px;
+    height: 250px;
+
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.container4__div1{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(202, 200, 65, 0.335);
+}
+.container4__div2{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(253, 25, 242, 0.363);
+}
+
+/* Paso 5*/
+.container5{ 
+    width: 400px;
+    height: 250px;
+
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+}
+.container5__div1{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(202, 200, 65, 0.335);
+}
+.container5__div2{
+    height: 220px;
+    width: 170px;
+    background-color: rgba(253, 25, 242, 0.363);
+}
+
+.container5__incorrecto{
+    position: absolute;
+    height: 30px;
+    top: -15px;
+    right: -5px;
+}
+.container5__correcto{
+    position: absolute;
+    height: 30px;
+    top: -15px;
+    right: 35px;
+}
+.container5__incorrecto:hover, .container5__correcto:hover{
+    filter: brightness(120%);
+}
+
+/* Paso 6*/
+.containerHover{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerHover__imagenHover1 {
+height: 25px;
+}
+.containerHover:hover .containerHover__imagenHover1{
+    transform: scale(2.8);
+}
+
+/*--*/
+
+.containerHover2{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.445);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerHover2__imagenHover2 {
+height: 25px;
+}
+.containerHover2:hover .containerHover2__imagenHover2{
+    transform: scale(2.8);
+    transition: 1s;
+}
+
+/*--*/
+
+.containerHover3{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.445);
+    position: relative;
+}
+.containerHover3__imagenHover3 {
+height: 25px;
+position: absolute;
+left: -50px;
+top: 65px;
+}
+.containerHover3:hover .containerHover3__imagenHover3{
+    transition: 1s;
+    transform: translateX(110px);
+}
+
+
+/*--*/
+
+.containerHover4{
+    height: 150px;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.445);
+    position: relative;
+    overflow: hidden;
+}
+.containerHover4__imagenHover4 {
+height: 25px;
+position: absolute;
+left: -50px;
+top: 65px;
+opacity: 0;
+}
+.containerHover4:hover .containerHover4__imagenHover4{
+    transition: 1s;
+    transform: translateX(110px);
+    opacity: 1;
+}
+
+
+
+/* Paso 7*/
+.container7{ 
+    width: 400px;
+    height: 250px;
+
+    background-image: url('./images/fondo.jpg');
+    background-size: cover;
+
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    overflow: hidden;
+    position: relative;
+}
+.container7__div1{
+    transform: translateX(-200px);
+    opacity: 0;
+    height: 220px;
+    width: 170px;
+    background-color: rgba(202, 200, 65, 0.335);
+}
+.container7__div2{
+    transform: translateX(200px);
+    opacity: 0;
+    height: 220px;
+    width: 170px;
+    background-color: rgba(253, 25, 242, 0.363);
+}
+.container7__incorrecto{
+    position: absolute;
+    height: 30px;
+    top: 5px;
+    right: 10px;
+    transform: translateY(-50px);
+    opacity: 0;
+
+}
+.container7__correcto{
+    position: absolute;
+    height: 30px;
+    top: 5px;
+    right: 50px;
+    transform: translateY(-50px);
+    opacity: 0;
+
+}
+.container7__incorrecto:hover, .container7__correcto:hover{
+    filter: brightness(120%);
+}
+
+/*TRANSICIONES Y TRANSFORMACIONES*/
+.container7:hover .container7__div1, .container7:hover .container7__div2{
+    opacity: 1;
+    transition: 1s;
+    transform: translateX(0px);
+}
+.container7:hover .container7__incorrecto, .container7:hover .container7__correcto{
+    opacity: 1;
+    transition: 1s;
+    transition-delay: .5s;
+    transform: translateY(0px);
+}
+
+
+/*PASO 8: fondo fijo*/
+    .container8{ 
+        width: 400px;
+        height: 250px;
+    
+        background-image: url('./images/fondoGrande.jpg');
+        background-attachment: fixed;
+        background-size: auto;
+        background-position: top;
+
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+        overflow: hidden;
+        position: relative;
+    }
+    .container8__div1{
+        transform: translateX(-200px);
+        opacity: 0;
+        height: 220px;
+        width: 170px;
+        background-color: rgba(243, 242, 159, 0.5);
+    }
+    .container8__div2{
+        transform: translateX(200px);
+        opacity: 0;
+        height: 220px;
+        width: 170px;
+        background-color: rgba(250, 191, 247, 0.52);
+    }
+    .container8__incorrecto{
+        position: absolute;
+        height: 30px;
+        top: 5px;
+        right: 10px;
+        transform: translateY(-50px);
+        opacity: 0;
+    
+    }
+    .container8__correcto{
+        position: absolute;
+        height: 30px;
+        top: 5px;
+        right: 50px;
+        transform: translateY(-50px);
+        opacity: 0;
+    
+    }
+    .container8__incorrecto:hover, .container8__correcto:hover{
+        filter: brightness(120%);
+    }
+    
+    /*TRANSICIONES Y TRANSFORMACIONES*/
+    .container8:hover .container8__div1, .container8:hover .container8__div2{
+        opacity: 1;
+        transition: 1s;
+        transform: translateX(0px);
+    }
+    .container8:hover .container8__incorrecto, .container8:hover .container8__correcto{
+        opacity: 1;
+        transition: 1s;
+        transition-delay: .5s;
+        transform: translateY(0px);
+    }
+
+
+
+    .margenFinal{
+        margin-top: 100px;
+    }
+
+    /*otros ejemplos*/
+	/*selección de texto*/
+	::selection {color: gold;  background: azure;} 
+    /*ALGUNAS OPCIONES PARA EL SCROLLBAR: */
+    /* width */   ::-webkit-scrollbar {width: 7px;}
+    /* Track */	::-webkit-scrollbar-track {	background: rgba(161, 161, 161, 0.219); }
+	/* Handle */::-webkit-scrollbar-thumb {	background: #ffd51c; }
+	/* Handle on hover */::-webkit-scrollbar-thumb:hover {background: #111; }
+    /* smooth */ html{  scroll-behavior: smooth;}
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+ 	<title> CSS | Patricia Manzanero </title>
+
+</head>
+<body>
+	<h1>Resumen CSS</h1>
+
+	<!--Voy a hacerlo por pasos tal y como lo haría-->
+	<h2>Paso 0</h2>
+	<p>Centro todo el contenido en el boddy utilizando flex</p>
+	<p>Os voy poniendo los pasos en el styles.css</p>
+
+	<h2>Paso 1</h2>
+	<p>Creo un contenedor, le pongo un color de fondo y alto y ancho para poder verlo</p>
+	<div class="container1">
+	</div>
+
+	<h2>Paso 2</h2>
+	<p>Le pongo una imagen de fondo. Añadiendo: background-size: cover; la imagen se ajusta al contenedor</p>
+	<div class="container2">
+	</div>
+
+	<h2>Paso 3</h2>
+	<p>Ponemos contenido a nuestro contenedor. Voy a dividirlo en dos contenedores más pequeños y a colocar uno al lado del otro</p>
+	<p>Hay que poner alto y ancho para que el contenedor exista</p>
+	<p>Se colocan en bloque, uno debajo del otro</p>
+	<div class="container3">
+		<div class="container3__div1"></div>
+		<div class="container3__div2"></div>
+	</div>
+	<p>Con overflow:hidden; hacemos invisible todo lo que sobresalga del contenedor. Sino la división morada sobresaldría.</p>
+
+	<h2>Paso 4</h2>
+	<p>Los pongo centrados en el contenedor uno al lado del otro utilizando flex en el padre (container4)</p>
+	<p>Les añado el contenido que quiera</p>
+	<div class="container4">
+		<div class="container4__div1">
+			<h4>Soy la división amarilla</h4>
+			<p>text-align: center; centra los textos. </p>
+			<p>display:flex; hace que las divisiones se coloquen una al lado de la otra</p>
+		</div>
+		<div class="container4__div2">
+			<h4>Soy la división morada</h4>
+			<p>justify-content: spece-around; consigue la distribución de los margenes. </p>
+			<p>align-items: center; centra los items verticalmente de dentro del contenedor.</p>
+		</div>
+	</div>
+	
+	<h2>Paso 5</h2>
+	<p>Vamos a superponer otros elementos a lo que ya existe</p>
+	<p>Recomiendo usar position: absolute; siempre dentro de un contenedor controlado con position: relative;</p>
+	<p>Añado una X y un V en la esquina superior derecha sobresaliendo por encima del contenedor.  Además les añado un filtro de brillo al hacer hover sobre ellos.</p>
+	<a href="https://lenguajecss.com/p/css/propiedades/filtros-css">Filtros CSS</a>
+
+	<div class="container5">
+		<div class="container5__div1">
+			<h4>Soy la división amarilla</h4>
+			<p>text-align: center; centra los textos. </p>
+			<p>display:flex; hace que las divisiones se coloquen una al lado de la otra</p>
+		</div>
+		<div class="container5__div2">
+			<h4>Soy la división morada</h4>
+			<p>justify-content: spece-around; consigue la distribución de los margenes. </p>
+			<p>align-items: center; centra los items verticalmente de dentro del contenedor.</p>
+		</div>
+
+		<img src="./images/x.svg" alt="Incorrecto" class="container5__incorrecto">
+		<img src="./images/v.svg" alt="Correcto" class="container5__correcto">
+	</div>
+
+
+	<h2>Paso 6</h2>
+	<p>Primero voy a explicar como hacer que un hover en un elemento afecte a otro</p>
+	<p>Al hacer hover en el contenedor la imagen de dentro es afectada por un transform</p>
+	<p>.containerHover<b>:hover</b> .containerHover__imagenHover{transform: scale(1.8);}</p>
+	<a href="https://developer.mozilla.org/es/docs/Web/CSS/transform">Transform</a>
+	
+	<div class="containerHover">
+		<img src="./images/cat.svg" alt="gato" class="containerHover__imagenHover1">
+	</div>
+
+	<p>Para que el cambio no sea tan brusco hay que poner una transición. transition: 1s;</p>
+	<a href="https://www.w3schools.com/css/css3_transitions.asp">Transitions</a>
+
+	<div class="containerHover2">
+		<img src="./images/cat.svg" alt="gato" class="containerHover2__imagenHover2">
+	</div>
+
+	<p>Ahora podemos hacer que aparezcan elementos sobre nuestros contenedores</p>
+	<div class="containerHover3">
+		<img src="./images/cat.svg" alt="gato" class="containerHover3__imagenHover3">
+	</div>
+
+	<p>para mejorar el efecto se pueden usar otros estilos como la opacidad o el overflow:hiden;</p>
+	<a href="https://www.w3schools.com/css/css_image_transparency.asp">Opacity</a>
+	<div class="containerHover4">
+		<img src="./images/cat.svg" alt="gato" class="containerHover4__imagenHover4">
+	</div>
+
+
+	<h2>Paso 7</h2>
+	<p>Con esto y un buen gusto por los colores se pueden hacer infinidad de cosas!</p>
+	<p>uso un transition-delay: 0.5s; en los iconos para que aparezcan un poco más tarde y listo :)</p>
+	<div class="container7">
+		<div class="container7__div1">
+			<h4>Soy la división amarilla</h4>
+			<p>text-align: center; centra los textos. </p>
+			<p>display:flex; hace que las divisiones se coloquen una al lado de la otra</p>
+		</div>
+		<div class="container7__div2">
+			<h4>Soy la división morada</h4>
+			<p>justify-content: spece-around; consigue la distribución de los margenes. </p>
+			<p>align-items: center; centra los items verticalmente de dentro del contenedor.</p>
+		</div>
+
+		<img src="./images/x.svg" alt="Incorrecto" class="container7__incorrecto">
+		<img src="./images/v.svg" alt="Correcto" class="container7__correcto">
+	</div>
+
+	<h3>Espero que os sirva!</h3>
+
+	<h2>Os dejo algún ejemplo de scrollbar, seleccion de texto, fondo fijo al final del CSS</h2>
+	
+
+	<div class="container8">
+			<div class="container8__div1">
+				<h4>Soy la división amarilla</h4>
+				<p>text-align: center; centra los textos. </p>
+				<p>display:flex; hace que las divisiones se coloquen una al lado de la otra</p>
+			</div>
+			<div class="container8__div2">
+				<h4>Soy la división morada</h4>
+				<p>justify-content: spece-around; consigue la distribución de los margenes. </p>
+				<p>align-items: center; centra los items verticalmente de dentro del contenedor.</p>
+			</div>
+	
+			<img src="./images/x.svg" alt="Incorrecto" class="container8__incorrecto">
+			<img src="./images/v.svg" alt="Correcto" class="container8__correcto">
+		</div>
+
+	<h2>Espero haberos ayudado</h2>
+	<h2 class="margenFinal">Ahora a hacer cosas increibles!! :D</h2>
+
+</body>	    
+</html>
+
